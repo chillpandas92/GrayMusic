@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 歌曲封面的圆角形状 -->
+    <style name="ShapeCover" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ShapeCircle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--
+        我的页 - 「扫描媒体库」弹窗用的主题。
+        关键点：
+          · windowBackground 透明 + windowIsFloating=false
+            → 弹窗本身可以 MATCH_PARENT 铺满屏幕
+          · backgroundDimEnabled=false
+            → 不让系统再叠一层 dim；被加载进来的 activity_scan.xml 的 root 本身
+              就带 #80000000 的半透明黑遮罩
+          · windowAnimationStyle 沿用系统 Dialog 默认的淡入淡出
+    -->
+    <style name="LibraryRescanDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+</resources>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  听歌报告 Top 3 下方的基座细线：
+  渐变从透明 → 浅蓝 → 透明，营造"领奖台灯光"的横向延伸感，非常淡不抢视线。
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="0"
+        android:startColor="#001565C0"
+        android:centerColor="#331565C0"
+        android:endColor="#001565C0"
+        android:type="linear" />
+    <corners android:radius="2dp" />
+</shape>

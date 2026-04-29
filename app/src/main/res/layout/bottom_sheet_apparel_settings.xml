@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/sheet_rounded_bg"
+    android:paddingStart="24dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/sheet_handle_bg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="装扮设置"
+        android:textColor="#FF000000"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="歌曲播放页面封面形状"
+        android:textColor="#FF333333"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/report_tabs_group_bg"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/btnPlayerCoverShapeSquare"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg_on"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="方形"
+            android:textColor="#FF1565C0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnPlayerCoverShapeCircle"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg_off"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="圆形"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

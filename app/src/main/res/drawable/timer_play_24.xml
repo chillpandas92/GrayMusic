@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 外环：填满 viewport（外圆 r=10 内圆 r=7.5），和 play_circle 等大 -->
+    <path
+        android:fillColor="#FF000000"
+        android:fillType="evenOdd"
+        android:pathData="M22,12a10,10 0 1 0 -20,0 10,10 0 0 0 20,0z M19.5,12a7.5,7.5 0 1 1 -15,0 7.5,7.5 0 0 1 15,0z" />
+    <!-- 顶部小冠（贴 viewport 上边缘） -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M9,0 h6 v2 h-6 z" />
+    <!-- 中心播放三角（同比放大） -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M10,8 v8 l7,-4 z" />
+</vector>

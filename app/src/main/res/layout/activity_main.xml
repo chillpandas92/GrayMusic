@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface_soft"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="灰度音乐"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="#FF000000"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="权限不再强制授予。允许音频权限后可自动扫描系统曲库；不授权也可以进入软件后手动添加文件夹。"
+                android:textSize="14sp"
+                android:textColor="#FF666666"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支持 MP3 · FLAC · M4A · OGG · WAV"
+                android:textSize="12sp"
+                android:textColor="#FF999999"
+                android:layout_marginBottom="32dp" />
+
+            <Button
+                android:id="@+id/btnAudio"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="允许扫描系统音频（可选）"
+                android:textColor="@color/btn_text_selector"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_black"
+                android:layout_marginBottom="14dp"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/btnNotification"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="允许通知（可选）"
+                android:textColor="@color/btn_text_selector"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_black"
+                android:layout_marginBottom="14dp"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/btnPickFolder"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="+ 添加文件夹（可选，可多选）"
+                android:textColor="@color/btn_text_selector"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_black"
+                android:stateListAnimator="@null" />
+
+            <LinearLayout
+                android:id="@+id/pickedFoldersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnDirectScan"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="扫描歌曲"
+        android:textColor="@color/btn_text_selector"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_black"
+        android:layout_marginTop="14dp"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

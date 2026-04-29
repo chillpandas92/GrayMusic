@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  第二名银牌：自顶向下的银灰渐变 + 深灰描边
+  用于听歌报告 Top 2 的名次徽章。
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:startColor="#FFFAFBFC"
+        android:centerColor="#FFD8DCE1"
+        android:endColor="#FFA0AAB3"
+        android:type="linear" />
+    <stroke
+        android:width="0.6dp"
+        android:color="#FF7D8892" />
+    <corners android:radius="999dp" />
+</shape>

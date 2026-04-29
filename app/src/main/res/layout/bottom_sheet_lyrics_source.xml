@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/sheet_rounded_bg"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="20dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sheet_handle_bg"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌词来源"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="#FF000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择当前歌曲使用的歌词文件"
+        android:textSize="12sp"
+        android:textColor="#FF888888"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="6dp" />
+
+    <LinearLayout
+        android:id="@+id/rowLyricsSourceEmbedded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内嵌"
+            android:textSize="14sp"
+            android:textColor="#FF333333" />
+
+        <ImageView
+            android:id="@+id/checkLyricsSourceEmbedded"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="gone"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowLyricsSourceLrc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LRC文件"
+            android:textSize="14sp"
+            android:textColor="#FF333333" />
+
+        <ImageView
+            android:id="@+id/checkLyricsSourceLrc"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="gone"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        android:background="#FFE6E6E6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌词设置"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="#FF000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btnLyricsAlignLeft"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg_on"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="居左"
+            android:textColor="#FF1565C0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnLyricsAlignCenter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg_off"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="居中"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

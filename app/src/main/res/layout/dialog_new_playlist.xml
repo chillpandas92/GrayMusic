@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  新建歌单的弹框内容：居中一个圆角白底容器，内部是标题、输入框、取消/确定。
+  用在 AlertDialog 里，外框的圆角由 rounded_dialog_bg 提供。
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_dialog_bg"
+    android:paddingStart="22dp"
+    android:paddingEnd="22dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="14dp">
+
+    <TextView
+        android:id="@+id/tvPlaylistDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新建歌单"
+        android:textColor="#FF000000"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/etPlaylistName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/search_box_bg"
+        android:hint="请输入歌单名称"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLength="40"
+        android:maxLines="1"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#FF999999"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnPlaylistDialogCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:text="取消"
+            android:textColor="#FF666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btnPlaylistDialogConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:text="确定"
+            android:textColor="#FF1565C0"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</LinearLayout>

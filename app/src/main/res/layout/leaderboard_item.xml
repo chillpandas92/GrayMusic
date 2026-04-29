@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/song_item_touch_bg"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- 排名数字：前三用不同颜色（在 Adapter 中设置） -->
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        android:textColor="#FF888888"
+        tools:text="1" />
+
+    <!-- 封面 42dp -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCover"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:background="#FFF2F2F2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/music_note_24"
+        android:contentDescription="cover"
+        app:shapeAppearanceOverlay="@style/ShapeCover"
+        app:strokeColor="@color/cover_frame_default"
+        app:strokeWidth="1.3dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF000000"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:text="歌名" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF888888"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:text="歌手" />
+
+    </LinearLayout>
+
+    <!-- 多选圆圈：平时 GONE，进多选模式时 VISIBLE；artists 模式的行 clickable=false 会一直保持 GONE -->
+    <ImageView
+        android:id="@+id/ivMultiSelectCheck"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="选中"
+        android:src="@drawable/ic_multiselect_circle_empty"
+        android:visibility="gone" />
+
+    <!-- 播放时长 -->
+    <TextView
+        android:id="@+id/tvListenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF1565C0"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        tools:text="12 分钟" />
+
+</LinearLayout>

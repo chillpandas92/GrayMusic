@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  播放列表抽屉
+  - LinearLayout match_parent 高度（代码里会设 BottomSheet 高度到 coordinator 的高度减状态栏）
+  - 顶部：拖拽小把手 + 头部（模式图标 + "正在播放" + 关闭）
+  - 下方：歌曲列表 RecyclerView
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sheet_rounded_bg">
+
+    <!-- 拖拽条 -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sheet_handle_bg" />
+
+    <!-- 顶部头 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <!--
+          模式图标：按用户的设置在 SEQUENTIAL/RANDOM 之间切换
+          SEQUENTIAL → ic_sort_az_24（列表状）
+          RANDOM → shuffle_24（交叉箭头）
+        -->
+        <ImageButton
+            android:id="@+id/btnQueueMode"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/shuffle_24"
+            android:scaleType="center"
+            android:contentDescription="播放模式" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvQueueModeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:textColor="#FF000000"
+                tools:text="随机播放" />
+
+            <TextView
+                android:id="@+id/tvQueueSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textColor="#FF888888"
+                tools:text="来源：听歌排行" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvQueueCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#FF888888"
+            tools:text="24 首" />
+
+        <ImageButton
+            android:id="@+id/btnQueueClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_expand_more_24"
+            android:scaleType="center"
+            android:contentDescription="关闭" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFE6E6E6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQueue"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

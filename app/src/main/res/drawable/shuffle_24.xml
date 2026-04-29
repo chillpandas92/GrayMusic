@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  随机播放图标 (icons8-shuffle)
+  原 SVG viewport 是 24x24，repeat / repeat_one 是 30x30。
+  为了让三个图标视觉上 *同样大*，这里统一 viewport 为 30x30，
+  然后用 <group translateX=3 translateY=3> 把 24x24 的路径居中放进 30x30 画布。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30">
+    <group
+        android:translateX="3"
+        android:translateY="3">
+        <path
+            android:fillColor="#FF000000"
+            android:pathData="M 18 1 L 18 5.09375 C 15.066406 5.535156 13.074219 7.882813 11 10.40625 C 8.199219 13.605469 5.398438 17 0 17 L 0 19 C 6.300781 19 9.800781 14.886719 12.5 11.6875 C 14.308594 9.535156 15.976563 7.617188 18 7.125 L 18 11 L 24 6 Z M 0 5 L 0 7 C 3.898438 7 6.394531 8.707031 8.59375 10.90625 C 8.992188 10.40625 9.507813 9.90625 9.90625 9.40625 C 7.507813 7.007813 4.5 5 0 5 Z M 18 13 L 18 16.875 C 16.1875 16.464844 14.714844 14.972656 13.1875 13.1875 C 12.789063 13.6875 12.304688 14.1875 11.90625 14.6875 C 13.675781 16.722656 15.515625 18.519531 18 18.90625 L 18 23 L 24 18 Z" />
+    </group>
+</vector>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/sheet_rounded_bg"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="28dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sheet_handle_bg"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放阈值"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="#FF000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲播放达到该比例记一次"
+        android:textSize="12sp"
+        android:textColor="#FF888888"
+        android:layout_marginBottom="6dp" />
+
+    <LinearLayout
+        android:id="@+id/rowThreshold70"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="70%"
+            android:textSize="14sp"
+            android:textColor="#FF333333" />
+
+        <ImageView
+            android:id="@+id/check70"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowThreshold90"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="90%"
+            android:textSize="14sp"
+            android:textColor="#FF333333" />
+
+        <ImageView
+            android:id="@+id/check90"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowThreshold100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="100%（完整播放）"
+            android:textSize="14sp"
+            android:textColor="#FF333333" />
+
+        <ImageView
+            android:id="@+id/check100"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+</LinearLayout>

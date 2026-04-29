@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  小皇冠图标：听歌报告 Top 1 名次徽章上方的金色小皇冠装饰。
+  简洁的三尖皇冠轮廓，使用金色填充。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="16dp"
+    android:height="16dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 皇冠主体：三峰一底 -->
+    <path
+        android:fillColor="#FFE4A81E"
+        android:strokeColor="#FFB27200"
+        android:strokeWidth="0.6"
+        android:pathData="M4,18 L4,9 L8.5,12.5 L12,6 L15.5,12.5 L20,9 L20,18 Z" />
+    <!-- 底座横杠 -->
+    <path
+        android:fillColor="#FFB27200"
+        android:pathData="M4,18 L20,18 L20,19.5 L4,19.5 Z" />
+    <!-- 顶部三颗小宝石 -->
+    <path
+        android:fillColor="#FFFFF3B0"
+        android:pathData="M12,6 m-1.1,0 a1.1,1.1 0 1,0 2.2,0 a1.1,1.1 0 1,0 -2.2,0" />
+    <path
+        android:fillColor="#FFFFF3B0"
+        android:pathData="M4,9 m-0.9,0 a0.9,0.9 0 1,0 1.8,0 a0.9,0.9 0 1,0 -1.8,0" />
+    <path
+        android:fillColor="#FFFFF3B0"
+        android:pathData="M20,9 m-0.9,0 a0.9,0.9 0 1,0 1.8,0 a0.9,0.9 0 1,0 -1.8,0" />
+</vector>

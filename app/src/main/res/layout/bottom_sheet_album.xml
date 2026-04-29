@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sheet_rounded_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/sheet_handle_bg" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/albumSheetScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="28dp">
+
+            <FrameLayout
+                android:layout_width="250dp"
+                android:layout_height="232dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="196dp"
+                    android:layout_height="196dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="2dp"
+                    android:alpha="0.96"
+                    android:src="@drawable/album_peek_disc"
+                    android:contentDescription="disc" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAlbumSheetCover"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:background="#FFF2F2F2"
+                    android:contentDescription="album cover"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/music_note_24"
+                    app:shapeAppearanceOverlay="@style/ShapeCover"
+                    app:strokeColor="@color/cover_frame_default"
+                    app:strokeWidth="1.3dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvAlbumSheetTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#FF000000"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvAlbumSheetArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#FF666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvAlbumSheetMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#FF888888"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFE4E4E4" />
+
+            <LinearLayout
+                android:id="@+id/albumSheetTracksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFE4E4E4" />
+
+            <TextView
+                android:id="@+id/tvAlbumSheetListenLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="专辑播放时长"
+                android:textColor="#FF000000"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvAlbumSheetListenTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#FF666666"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

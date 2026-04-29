@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/playerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@color/surface_soft">
+
+    <ImageView
+        android:id="@+id/ivPlayerBackdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0"
+        android:importantForAccessibility="no"
+        android:contentDescription="@null" />
+
+    <View
+        android:id="@+id/playerBackdropOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/surface_soft"
+        android:importantForAccessibility="no" />
+
+    <View
+        android:id="@+id/playerBottomGlow"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:importantForAccessibility="no" />
+
+    <com.example.localmusicapp.PlayerPagesScrollView
+        android:id="@+id/playerPagesScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/playerPagesStrip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include layout="@layout/page_player_details" />
+
+            <include layout="@layout/page_player_main" />
+
+            <include layout="@layout/page_player_lyrics" />
+
+        </LinearLayout>
+    </com.example.localmusicapp.PlayerPagesScrollView>
+
+    <ImageButton
+        android:id="@+id/btnPlayerClose"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_expand_more_24"
+        android:scaleType="center"
+        android:contentDescription="关闭" />
+
+    <FrameLayout
+        android:id="@+id/playerSettingsHost"
+        android:visibility="gone"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+        <ImageButton
+            android:id="@+id/btnPlayerSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_player_settings_24"
+            android:scaleType="center"
+            android:contentDescription="设置" />
+
+        <View
+            android:id="@+id/playerSettingsCenterDot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center"
+            android:background="@drawable/player_settings_center_dot" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/playerPageIndicatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/playerPageIndicatorLeft"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/player_page_indicator_pill" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="1dp" />
+
+        <View
+            android:id="@+id/playerPageIndicatorCenter"
+            android:layout_width="16dp"
+            android:layout_height="6dp"
+            android:background="@drawable/player_page_indicator_pill" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="1dp" />
+
+        <View
+            android:id="@+id/playerPageIndicatorRight"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/player_page_indicator_pill" />
+
+    </LinearLayout>
+
+</FrameLayout>

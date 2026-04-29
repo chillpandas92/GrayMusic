@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  第一名金牌：自顶向下的金色渐变 + 深金描边
+  用于听歌报告 Top 1 的名次徽章。
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:startColor="#FFFFE67A"
+        android:centerColor="#FFF4C742"
+        android:endColor="#FFD58F14"
+        android:type="linear" />
+    <stroke
+        android:width="0.6dp"
+        android:color="#FFB26F00" />
+    <corners android:radius="999dp" />
+</shape>

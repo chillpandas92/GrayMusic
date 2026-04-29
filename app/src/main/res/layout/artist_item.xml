@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical|start"
+    android:background="@drawable/song_item_touch_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
+
+    <TextView
+        android:id="@+id/tvArtistName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="#FF000000"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="歌手名" />
+
+    <TextView
+        android:id="@+id/tvArtistMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="start"
+        android:textColor="#FF888888"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="3张专辑 / 24首歌曲" />
+
+</LinearLayout>

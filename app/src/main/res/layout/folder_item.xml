@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/song_item_touch_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivFolderCover"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="#FFF2F2F2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_folder_24"
+        android:contentDescription="folder cover"
+        app:shapeAppearanceOverlay="@style/ShapeCover"
+        app:strokeColor="@color/cover_frame_default"
+        app:strokeWidth="1.3dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF000000"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:text="Music" />
+
+        <TextView
+            android:id="@+id/tvFolderMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#FF888888"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:text="24首歌曲" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnFolderMore"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_more_vert_24"
+        android:contentDescription="更多"
+        android:visibility="gone" />
+
+</LinearLayout>

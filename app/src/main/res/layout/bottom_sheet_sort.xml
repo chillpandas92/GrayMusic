@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/sheet_rounded_bg"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="28dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/sheet_handle_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="排序方式"
+        android:textColor="#FF000000"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:id="@+id/rowMethodTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="歌曲名"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/checkMethodTitle"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="invisible"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowMethodImportDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="导入日期"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/checkMethodImportDate"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="invisible"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowMethodArtistAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="艺术家（专辑）"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/checkMethodArtistAlbum"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="invisible"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowMethodPlayCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="按播放次数"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/checkMethodPlayCount"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="invisible"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        android:background="#FFE6E6E6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="排序顺序"
+        android:textColor="#FF000000"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:id="@+id/rowOrderAsc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="升序"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/checkOrderAsc"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="invisible"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowOrderDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="降序"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/checkOrderDesc"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_check_24"
+            android:tint="#FF000000"
+            android:visibility="invisible"
+            android:contentDescription="selected" />
+    </LinearLayout>
+
+</LinearLayout>

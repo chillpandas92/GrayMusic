@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sheet_rounded_bg"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="18dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/sheet_handle_bg" />
+
+    <TextView
+        android:id="@+id/tvRingtoneTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="设置铃声"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        tools:text="设置铃声" />
+
+    <TextView
+        android:id="@+id/tvRingtoneSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#FF666666"
+        android:textSize="13sp"
+        tools:text="歌曲名称 · 歌手" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ringtone_preview_bg"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/tvRingtoneSegmentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="片段：00:00 - 00:30"
+            android:textColor="#FF333333"
+            android:textSize="13sp" />
+
+        <com.example.localmusicapp.RingtoneWaveformView
+            android:id="@+id/viewRingtoneWaveform"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp" />
+
+        <SeekBar
+            android:id="@+id/seekRingtonePlayback"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:max="1000"
+            android:progress="0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="从这里开始"
+            android:textColor="#FF666666"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/seekRingtoneStart"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:max="1000"
+            android:progress="0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="到这里结束"
+            android:textColor="#FF666666"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/seekRingtoneEnd"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:max="1000"
+            android:progress="1000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/inputRingtoneStart"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@drawable/ringtone_input_bg"
+                android:hint="从这里开始"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textColor="#FF000000"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/inputRingtoneEnd"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ringtone_input_bg"
+                android:hint="到这里结束"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textColor="#FF000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnRingtoneUseCurrentStart"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/ringtone_secondary_btn_bg"
+                android:gravity="center"
+                android:text="取当前位置为开始"
+                android:textColor="#FF333333"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnRingtoneUseCurrentEnd"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ringtone_secondary_btn_bg"
+                android:gravity="center"
+                android:text="取当前位置为结束"
+                android:textColor="#FF333333"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnRingtonePlayPause"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/ringtone_secondary_btn_bg"
+            android:gravity="center"
+            android:text="播放片段"
+            android:textColor="#FF000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnRingtoneApply"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/ringtone_primary_btn_bg"
+            android:gravity="center"
+            android:text="设为铃声"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRingtoneHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="如系统要求，请允许本软件修改系统设置后再设置铃声。支持 MP3、FLAC、WAV、OGG 等格式。"
+        android:textColor="#FF8A8A8A"
+        android:textSize="11sp" />
+
+</LinearLayout>

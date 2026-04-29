@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 扫描完成：确定按钮启用态。实心主色蓝 + 大圆角 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FF1E5AC0" />
+    <corners android:radius="14dp" />
+</shape>
